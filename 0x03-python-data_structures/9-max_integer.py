@@ -1,3 +1,14 @@
 #!/usr/bin/python3
+
+
 def max_integer(my_list=[]):
-        return (min(my_list, key=lambda i: -i)) if my_list else None
+    if len(my_list) == 0:
+        return
+
+    large = my_list[0]
+    for i in range(1, len(my_list)):
+        if large < my_list[i]:
+            large = my_list[i]
+        else:
+            continue
+    return large
